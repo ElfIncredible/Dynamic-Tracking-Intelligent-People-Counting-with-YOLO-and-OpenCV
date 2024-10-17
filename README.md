@@ -11,6 +11,9 @@ This project develops a real-time people counting and tracking system using YOLO
   - [Object Detection and Filtering](#object-detection-and-filtering)
   - [Tracking and Counting People](#tracking-and-counting-people)
   - [Visualizing and Displaying Results](#visualizing-and-displaying-results)
+- [Results](#results)
+- [Impact](#impact)
+- [Future Improvements](#future-improvements)
 
 ## Project Overview
 This project aims to create an intelligent, real-time people counting and tracking system leveraging advanced computer vision techniques. By integrating the YOLO (You Only Look Once) model, the system efficiently detects and identifies individuals in video streams.
@@ -42,3 +45,16 @@ The dataset for this project comprises video recordings capturing various public
 
 ### Visualizing and Displaying Results
 - Displays bounding boxes, IDs, and counts on the video frame in real time, along with the final output showing the number of people moving in/out.
+
+## Results
+The implemented system successfully tracks and counts people in real-time from video footage. Using the YOLO object detection model and the SORT tracker, the system accurately detects individuals, even in crowded or dynamic environments. The visual overlay, with bounding boxes and unique IDs for each person, provides a clear view of the tracking process. Additionally, the system reliably counts people moving in and out of defined zones, updating the counts instantly.
+
+## Impact
+This solution improves crowd monitoring and management by automating the counting and tracking process. It can be used in a variety of public spaces like malls, train stations, and event venues to enhance security, optimize staffing, and ensure safety. The real-time nature of the system provides immediate insights, allowing for better decision-making and resource allocation.
+
+## Future Improvements
+- **Enhanced Detection Accuracy:** Incorporating more advanced models or fine-tuning the YOLO model specifically for different environments (e.g., low-light conditions) can improve detection accuracy, particularly in complex scenarios like occlusions or dense crowds.
+- **Multi-Camera Integration:** Expanding the system to support multiple camera feeds would enable broader area coverage and more comprehensive tracking, particularly in large venues or city-wide surveillance.
+- **Real-Time Alerts:** Implementing real-time notifications for specific events (e.g., overcrowding or unusual movement patterns) can enhance security and management.
+- **Optimized Resource Use:** Leveraging edge computing to perform detection and tracking locally would reduce latency and bandwidth usage, making the system more scalable for large-scale deployments.
+- **Behavior Analysis:** Adding functionality to analyze movement patterns or detect suspicious behavior could provide more insightful analytics for crowd management and security monitoring.
