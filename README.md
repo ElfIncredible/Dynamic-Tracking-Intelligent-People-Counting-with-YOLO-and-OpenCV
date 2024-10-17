@@ -6,6 +6,11 @@ This project develops a real-time people counting and tracking system using YOLO
 - [Problem Statement](#problem-statement)
 - [Dataset](#dataset)
 - [Computer Vision](#computer-vision)
+  - [Importing Libraries and Loading Model](#importing-libraries-and-Loading-model)
+  - [Setting Up Video, Mask, and Tracker](#setting-up-video,-mask,-and-tracker)
+  - [Object Detection and Filtering](#object-detection-and-filtering)
+  - [Tracking and Counting People](#tracking-and-counting-people)
+  - [Visualizing and Displaying Results](#visualizing-and-displaying-results)
 
 ## Project Overview
 This project aims to create an intelligent, real-time people counting and tracking system leveraging advanced computer vision techniques. By integrating the YOLO (You Only Look Once) model, the system efficiently detects and identifies individuals in video streams.
@@ -19,7 +24,7 @@ This project addresses the challenges of real-time people detection and tracking
 The dataset for this project comprises video recordings capturing various public environments, including indoor and outdoor spaces with varying levels of crowd density. It is designed to facilitate the training and evaluation of the people counting and tracking system. 
 
 ## Computer Vision
-### Importing Libraries & Loading Model
+### Importing Libraries and Loading Model
 - Imports essential libraries (YOLO, cv2, cvzone, Sort) for object detection, tracking, and image processing.
 - Loads the YOLO model trained on COCO dataset to detect objects in video.
 
@@ -27,13 +32,13 @@ The dataset for this project comprises video recordings capturing various public
 - Captures video and applies a mask to focus on a specific region.
 - Initializes the Sort tracker for tracking detected objects across frames.
 
-### Object Detection & Filtering
+### Object Detection and Filtering
 - YOLO detects objects in the video feed, generating bounding boxes.
 - Filters detections to only track "person" class with a confidence threshold above 0.3.
 
-### Tracking & Counting People
+### Tracking and Counting People
 - Tracks detected people using Sort, assigning unique IDs.
 - Counts people crossing the defined limitsUp and limitsDown lines and updates counts.
 
-### Visualizing & Displaying Results
+### Visualizing and Displaying Results
 - Displays bounding boxes, IDs, and counts on the video frame in real time, along with the final output showing the number of people moving in/out.
