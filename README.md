@@ -17,3 +17,23 @@ This project addresses the challenges of real-time people detection and tracking
 
 ## Dataset
 The dataset for this project comprises video recordings capturing various public environments, including indoor and outdoor spaces with varying levels of crowd density. It is designed to facilitate the training and evaluation of the people counting and tracking system. 
+
+## Computer Vision
+### Importing Libraries & Loading Model
+- Imports essential libraries (YOLO, cv2, cvzone, Sort) for object detection, tracking, and image processing.
+- Loads the YOLO model trained on COCO dataset to detect objects in video.
+
+### Setting Up Video, Mask, and Tracker
+- Captures video and applies a mask to focus on a specific region.
+- Initializes the Sort tracker for tracking detected objects across frames.
+
+### Object Detection & Filtering
+- YOLO detects objects in the video feed, generating bounding boxes.
+- Filters detections to only track "person" class with a confidence threshold above 0.3.
+
+### Tracking & Counting People
+- Tracks detected people using Sort, assigning unique IDs.
+- Counts people crossing the defined limitsUp and limitsDown lines and updates counts.
+
+### Visualizing & Displaying Results
+- Displays bounding boxes, IDs, and counts on the video frame in real time, along with the final output showing the number of people moving in/out.
